@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="UTF-8"/>
+	<title>点餐首页</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js" ></script>
+</head>
+<body>
+	<div class="main login-page">
+		 
+		<div class="yhq-div">
+			<div class="yhq-top">
+				 <h6>
+				 	手动添加优惠券
+				 </h6>
+				 <p>
+				 	<input class="fl" type="text" placeholder="请输入优惠券号码"  />
+				 	<button class="fr">激活</button>
+				 </p>
+			</div>
+			<div class="yhq-tab">
+				<ul class="hd">
+					<li class="currt">
+						可用优惠券
+					</li>
+					<li>
+						过期优惠券
+					</li>
+					<li class="clear"></li>
+				</ul>
+				<div class="yhq-tab-con">
+					<div class="y-t-con Coupon-Content-list">
+						<div class="Couponbox">
+							<div class="Couponbox-header">
+								<b><sub>￥</sub>50</b>
+								<p>
+									<font>满100元使用</font>元优惠券
+								</p>
+							</div>
+							<div class="Couponbox-footer">
+								<p>
+									使用范围：仅可购买手机充值商品（客户端充值）
+								</p>
+								<p>
+									有&nbsp;&nbsp;效&nbsp;&nbsp;期：<span>2015.06.05--2015.07.08</span>
+								</p>
+							</div>
+						</div>
+						<div class="Couponbox">
+							<div class="Couponbox-header">
+								<b><sub>￥</sub>50</b>
+								<p>
+									<font>满100元使用</font>元优惠券
+								</p>
+							</div>
+							<div class="Couponbox-footer">
+								<p>
+									使用范围：仅可购买手机充值商品（客户端充值）
+								</p>
+								<p>
+									有&nbsp;&nbsp;效&nbsp;&nbsp;期：<span>2015.06.05--2015.07.08</span>
+								</p>
+							</div>
+						</div>
+						<div class="Couponbox">
+							<div class="Couponbox-header">
+								<b><sub>￥</sub>50</b>
+								<p>
+									<font>满100元使用</font>元优惠券
+								</p>
+							</div>
+							<div class="Couponbox-footer">
+								<p>
+									使用范围：仅可购买手机充值商品（客户端充值）
+								</p>
+								<p>
+									有&nbsp;&nbsp;效&nbsp;&nbsp;期：<span>2015.06.05--2015.07.08</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="y-t-con guoqi">
+						<div class="Couponbox">
+							<div class="Couponbox-header">
+								<b><sub>￥</sub>50</b>
+								<p>
+									<font>满100元使用</font>元优惠券
+								</p>
+							</div>
+							<div class="Couponbox-footer">
+								<p>
+									使用范围：仅可购买手机充值商品（客户端充值）
+								</p>
+								<p>
+									有&nbsp;&nbsp;效&nbsp;&nbsp;期：<span>2015.06.05--2015.07.08</span>
+								</p>
+							</div>
+						</div>
+						<div class="Couponbox">
+							<div class="Couponbox-header">
+								<b><sub>￥</sub>50</b>
+								<p>
+									<font>满100元使用</font>元优惠券
+								</p>
+							</div>
+							<div class="Couponbox-footer">
+								<p>
+									使用范围：仅可购买手机充值商品（客户端充值）
+								</p>
+								<p>
+									有&nbsp;&nbsp;效&nbsp;&nbsp;期：<span>2015.06.05--2015.07.08</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function tab(li,div){
+			$(li).hover(function(){
+				var $li = $(this).index();
+				$(this).addClass('currt').siblings().removeClass('currt');
+				$(div).eq($li).show().siblings().hide();
+			})
+		}
+		tab('.yhq-tab li','.y-t-con')
+	</script>
+</body>
+</html>

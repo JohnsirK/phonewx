@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="UTF-8"/>
+	<title>点餐首页</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" href="css/MultiPicker.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="js/city.js" ></script>
+	<script type="text/javascript" src="js/MultiPicker.js" ></script>
+	<!--icheck 美化-->
+	<script type="text/javascript" src="iCheck/icheck.min.js" ></script>
+	<link rel="stylesheet" href="iCheck/skins/all.css" />
+	<!--layer 弹窗-->
+	<script src="layer_mobile/layer.js"></script>
+</head>
+<body>
+	<div class="main">
+		 <div class="bg" style="z-index: 99;"></div>
+		<div class="dingd-info yue-info">
+			 <div class="xs-yue">
+			 	<h4>余额（元）</h4>
+			 	<p>
+			 		131.40
+			 	</p>
+			 </div>
+			 
+			  <div class="div-kuai">
+			 	<h5 class="yhq-h5">
+			 		充值  <small class="fr"><i class="fa fa-angle-right"></i></small>
+			 	</h5>
+		 	  </div>
+			 <div class="div-kuai">
+			 	<h5 class="yhq-h5 marb20">
+			 		充值记录
+			 	 
+			 	</h5>
+			 	<ul class="list-content xs-czjl">
+		 			 <li>
+		 			 	2017年8月29日10:29:14 充值 30元
+		 			 </li>
+					  <li>
+		 			 	2017年8月29日10:29:14 充值 30元
+		 			 </li>
+		 			  <li>
+		 			 	2017年8月29日10:29:14 充值 30元
+		 			 </li>
+		 			 <li>
+		 			 	2017年8月29日10:29:14 充值 30元
+		 			 </li>
+					  <li>
+		 			 	2017年8月29日10:29:14 充值 30元
+		 			 </li>
+		 			  <li>
+		 			 	2017年8月29日10:29:14 充值 30元
+		 			 </li>
+		 			  
+			 	</ul>
+			 </div>
+				 
+				 
+		</div>
+	 
+	</div>
+	 
+	<script>
+		 $(document).ready(function(){
+		 	$('.mobile-zhifu').click(function(){
+			  	 $('.bg').show();
+			  	 $('.mobile-yhk').show().addClass('fadeInBottom20')
+			  	 $('body,html').css({height:'100%'})
+			  })
+		 	$('.bg').click(function(){
+		 		$(this).hide();
+		 		$('body,html').css({height:'auto'});
+		 		$('.mobile-yhk').hide();
+		 	})
+			  $('input').iCheck({
+			    checkboxClass: 'icheckbox_square-red',
+			    radioClass: 'iradio_square-red',
+			    increaseArea: '100%', // optional
+			  });
+			  $('.mobile-yhk li').on('click',function(){
+				$(this).iCheck('check');
+			  });
+			  
+			 
+			});
+			 
+		
+	  	
+		 
+	</script>
+	
+</body>
+</html>

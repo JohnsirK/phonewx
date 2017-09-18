@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="UTF-8"/>
+	<title>点餐首页</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" href="css/MultiPicker.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="js/city.js" ></script>
+	<script type="text/javascript" src="js/MultiPicker.js" ></script>
+	<!--icheck 美化-->
+	<script type="text/javascript" src="iCheck/icheck.min.js" ></script>
+	<link rel="stylesheet" href="iCheck/skins/all.css" />
+	<!--layer 弹窗-->
+	<script src="layer_mobile/layer.js"></script>
+</head>
+<body>
+	<div class="main">
+		 <div class="bg" style="z-index: 99;"></div>
+		<div class="dingd-info yue-info">
+			 <div class="xs-yue">
+			 	<h4>余额（元）</h4>
+			 	<p>
+			 		131.40
+			 	</p>
+			 </div>
+			 
+			  <div class="div-kuai" style="padding:0.1rem 0.2rem">
+			 	<h5 class="yhq-h5">
+			 		充值金额 <input type="text" placeholder="请输入金额"  class="money-iyue"/>
+			 	</h5>
+		 	  </div>
+		 	  
+		 	  <div class="div-kuai mony-div">
+			 	<h5 class="yhq-h5">
+			 		<input class="mon-ichk" type="radio" name="iCheck-qb" checked><span class="marr10" >微信充值</span>  <small class="fr"><i class="fa fa-angle-right"></i></small>
+			 	</h5>
+		 	  </div>
+			 <div class="div-kuai mony-ycz">
+			 	<h5 class="yhq-h5 ">
+			 		<input class="mon-ichk" type="radio" name="iCheck-qb" ><span class="marr10">银行卡充值</span>
+			 	</h5>
+			 	<ul class="list-content xs-czjl" id="yh-radio">
+			 		<li>
+				 	 	<input type="radio" name="iCheck"  checked> <span class="marr10">工商银行</span> 
+			 		</li>
+			 		<li>
+			 			<input type="radio" name="iCheck"  > <span class="marr10">邮政银行</span> 
+			 		</li>  
+			 	</ul>
+			 </div>
+				 
+				 
+		</div>
+		<div class="footer-js money-footer">
+				 
+				<span class="fr">
+					<a href="">下一步</a>
+				</span>
+			
+		</div>
+	</div>
+	 
+	<script>
+		 $(document).ready(function(){
+		 	$('.mobile-zhifu').click(function(){
+			  	 $('.bg').show();
+			  	 $('.mobile-yhk').show().addClass('fadeInBottom20')
+			  	 $('body,html').css({height:'100%'})
+			  })
+		 	$('.bg').click(function(){
+		 		$(this).hide();
+		 		$('body,html').css({height:'auto'});
+		 		$('.mobile-yhk').hide();
+		 	})
+			  $('input').iCheck({
+			    checkboxClass: 'icheckbox_square-red',
+			    radioClass: 'iradio_square-red',
+			    increaseArea: '100%', // optional
+			  });
+			  $('#yh-radio li').on('click',function(){
+				$(this).iCheck('check');
+				
+			  });
+			  $('.div-kuai h5').on('click',function(){
+				$(this).iCheck('check');
+				if($('.div-kuai').hasClass('mony-ycz')){
+					$(this).parent().find('#yh-radio').slideToggle();
+				} 
+				 
+			  });
+			 
+			});
+			 
+		
+	  	
+		 
+	</script>
+	
+</body>
+</html>
